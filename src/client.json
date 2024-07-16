@@ -1,0 +1,27 @@
+{
+
+"clients":[
+    {
+    "id": "1",
+    "firstname": "emna",
+    "lastname": "rahmouni",
+    "email": "emna.rah@gmail.com"
+    
+    
+  },
+    {
+    "id": "2",
+    "firstname": "client",
+    "lastname": "aaaa",
+    "email": "hello@gmail.com"
+    },
+    {
+        "id": "3",
+        "firstname": "yaaOmar",
+        "lastname": "mach",
+        "email": "ooo@gmail.com"
+        }
+    ]
+}
+  
+  
