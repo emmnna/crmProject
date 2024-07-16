@@ -10,7 +10,7 @@ return (
             <td>{props.cl.firstname}</td>
             <td>{props.cl.lastname}</td>
             <td>{props.cl.email}</td>
-            {/* <td ><a ><Link to={props.client.id} >details</Link></a></td> */}
+           
         </tr>
     </>
 )

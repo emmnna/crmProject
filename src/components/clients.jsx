@@ -3,6 +3,9 @@ import { useState ,useEffect} from "react";
 import clients from '../client.json'
 import Client from '../components/client';
 export default function Clients(){
+    
+  
+  
     return (
         <>
        <div>
@@ -19,7 +22,7 @@ export default function Clients(){
        
         <tbody>
        {
-           clients.map((c,i)=>{
+           clients?.clients?.map((c,i)=>{
             return <Client  cl={c} key={i}/>
            }) 
         }
