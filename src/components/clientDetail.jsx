@@ -16,23 +16,59 @@ export default function ClientDetails(){
     },[])
     return (
         <>
-        <Sidebar />
-        <div>
-        <div>First Name:{cl.nom}</div>
-        <div>Email:{cl.email}</div>
-        <div>Phone Number:{cl.numeroDeTelephone}</div>
-        <div>Type:{cl.typeDeBienConsulte}</div>
-        <div>Date:{cl.dateDeConsultation}</div>
-        <div>Simulation{cl.simulationDeCredit}</div>
-        <div>Amount{cl.montantDuCreditSimule}</div>
-        <div>Status{cl.statutDuContact}</div>
-        <div>Source From the Lead:{cl.sourceDuLead}</div>
-        <div>Notes:{cl.notes}</div>
+        <div className="flex min-h-screen bg-gray-100">
+                <Sidebar />
+                <div className="flex-1 p-8">
+                    <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline" > Client details : </h1>
+                    <div className="bg-white shadow-md rounded p-6">
+                        <div className="mb-4">
+                            <h2 className="text-sky-600 font-semibold text-xl">Full Name:</h2>
+                            <p className="text-black">{cl.nom}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Email:</h2>
+                            <p className="text-black">{cl.email}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Phone Number:</h2>
+                            <p className="text-black">{cl.numeroDeTelephone}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Type:</h2>
+                            <p className="text-black">{cl.typeDeBienConsulte}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Date:</h2>
+                            <p className="text-black">{cl.dateDeConsultation}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Simulation:</h2>
+                            <p className="text-black">{cl.simulationDeCredit}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Amount:</h2>
+                            <p className="text-black">{cl.montantDuCreditSimule}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Status:</h2>
+                            <p className="text-black">{cl.statutDuContact}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Source From the Lead:</h2>
+                            <p className="text-black">{cl.sourceDuLead}</p>
+                        </div>
+                        <div className="mb-4">
+                            <h2 className="text-xl font-semibold text-sky-600">Notes:</h2>
+                            <p className="text-black">{cl.notes}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
         
-        </div>
+       
              
             
         </>

@@ -14,11 +14,11 @@ export default function Clients(){
             
             <Sidebar />
        
-               
-                <table className="flex-1 flex flex-col ">
-                  <h1 className="text-3xl font-bold mb-8">List of clients</h1>
-                  <input type="text"  placeholder="Search by name"/>
-                  
+            <div className="flex-1 flex flex-col p-4">
+                
+                  <h1 className="text-3xl font-bold mb-8 text-blue-900 text-left underline" >List of clients:</h1>
+                  <input type="text"  placeholder="Search by name" className="mb-4 p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                  <table className="w-full bg-white shadow-md rounded">
                     <thead>
                         <tr>
                             <th className="border border-gray-300 px-4 py-2">Name</th>
@@ -27,6 +27,7 @@ export default function Clients(){
                             <th className="border border-gray-300 px-4 py-2">Date</th>
                             <th className="border border-gray-300 px-4 py-2">Simulation</th>
                             <th className="border border-gray-300 px-4 py-2">Status</th>
+                            <th className="border border-gray-300 px-4 py-2">Action</th>
                         </tr>
                     </thead>
        
@@ -42,6 +43,8 @@ export default function Clients(){
     </table>
       
        </div>
+       </div>
+
    
         </>
     )

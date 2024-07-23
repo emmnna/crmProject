@@ -10,7 +10,7 @@ const Sidebar = () => {
         width: 240,
         flexShrink: 0,
         '& .MuiDrawer-paper': {
-          width: 240,
+          width: 320,
           boxSizing: 'border-box',
           backgroundColor: '#282c34', 
           color: '#ffffff' 
