@@ -1,27 +1,314 @@
 {
 
 "clients":[
-    {
-    "id": "1",
-    "firstname": "emna",
-    "lastname": "rahmouni",
-    "email": "emna.rah@gmail.com"
-    
-    
-  },
-    {
-    "id": "2",
-    "firstname": "client",
-    "lastname": "aaaa",
-    "email": "hello@gmail.com"
-    },
-    {
-        "id": "3",
-        "firstname": "yaaOmar",
-        "lastname": "mach",
-        "email": "ooo@gmail.com"
-        }
-    ]
+  {
+    "id":"1",
+    "nom": "Alice Martin",
+    "email": "alice.martin@example.com",
+    "numeroDeTelephone": "+33123456780",
+    "typeDeBienConsulte": "Maison 5 pièces, 120 m², Lyon 3ème",
+    "dateDeConsultation": "2024-07-15",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 450000,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Intéressée par une visite. RDV fixé pour la semaine prochaine."
+},
+{
+  "id":"2",
+
+    "nom": "Bruno Lefèvre",
+    "email": "bruno.lefevre@example.com",
+    "numeroDeTelephone": "+33678901234",
+    "typeDeBienConsulte": "Studio 30 m², Bordeaux Centre",
+    "dateDeConsultation": "2024-06-30",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Inscription newsletter",
+    "notes": "Souhaite recevoir plus d'informations par email."
+},
+{
+  "id":"3",
+
+    "nom": "Claire Dubois",
+    "email": "claire.dubois@example.com",
+    "numeroDeTelephone": "+33789012345",
+    "typeDeBienConsulte": "Appartement 2 pièces, 50 m², Lille Centre",
+    "dateDeConsultation": "2024-07-05",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 220000,
+    "statutDuContact": "RDV programmé",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Visite prévue pour le 22 juillet."
+},
+{
+  "id":"4",
+
+    "nom": "David Bernard",
+    "email": "david.bernard@example.com",
+    "numeroDeTelephone": "+33890123456",
+    "typeDeBienConsulte": "Maison 4 pièces, 100 m², Nantes Sud",
+    "dateDeConsultation": "2024-07-10",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 300000,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Dossier de financement en cours de validation."
+},
+{
+  "id":"5",
+
+    "nom": "Eva Moreau",
+    "email": "eva.moreau@example.com",
+    "numeroDeTelephone": "+33123456781",
+    "typeDeBienConsulte": "Duplex 80 m², Toulouse Centre",
+    "dateDeConsultation": "2024-07-12",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "En attente de décision de la banque."
+},
+{
+  "id":"6",
+
+    "nom": "François Petit",
+    "email": "francois.petit@example.com",
+    "numeroDeTelephone": "+33678901235",
+    "typeDeBienConsulte": "Appartement 3 pièces, 70 m², Marseille Vieux Port",
+    "dateDeConsultation": "2024-07-17",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 280000,
+    "statutDuContact": "RDV programmé",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Visite prévue pour la fin du mois."
+},
+{
+  "id":"7",
+
+    "nom": "Géraldine Laurent",
+    "email": "geraldine.laurent@example.com",
+    "numeroDeTelephone": "+33789012346",
+    "typeDeBienConsulte": "Loft 90 m², Strasbourg Petite France",
+    "dateDeConsultation": "2024-07-18",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Visite virtuelle demandée."
+},
+{
+  "id":"8",
+
+    "nom": "Hugo Richard",
+    "email": "hugo.richard@example.com",
+    "numeroDeTelephone": "+33890123457",
+    "typeDeBienConsulte": "Appartement 4 pièces, 85 m², Nice Centre",
+    "dateDeConsultation": "2024-07-20",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 350000,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "En attente de retour de la banque."
+},
+{
+  "id":"9",
+
+    "nom": "Isabelle Simon",
+    "email": "isabelle.simon@example.com",
+    "numeroDeTelephone": "+33123456782",
+    "typeDeBienConsulte": "Maison 6 pièces, 150 m², Bordeaux Caudéran",
+    "dateDeConsultation": "2024-07-13",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Préférait attendre la rentrée pour se décider."
+},
+{
+  "id":"10",
+
+    "nom": "Julien Lambert",
+    "email": "julien.lambert@example.com",
+    "numeroDeTelephone": "+33678901236",
+    "typeDeBienConsulte": "Appartement 1 pièce, 35 m², Montpellier Antigone",
+    "dateDeConsultation": "2024-07-01",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 150000,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Attente de confirmation pour un crédit étudiant."
+},
+{
+  "id":"11",
+
+    "nom": "Karine Girard",
+    "email": "karine.girard@example.com",
+    "numeroDeTelephone": "+33789012347",
+    "typeDeBienConsulte": "Maison 5 pièces, 130 m², Rennes Nord",
+    "dateDeConsultation": "2024-07-02",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "RDV programmé",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "RDV pour visite fixé pour le 24 juillet."
+},
+{
+  "id":"12",
+
+    "nom": "Louis Faure",
+    "email": "louis.faure@example.com",
+    "numeroDeTelephone": "+33890123458",
+    "typeDeBienConsulte": "Appartement 2 pièces, 45 m², Lyon Croix-Rousse",
+    "dateDeConsultation": "2024-07-06",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 200000,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Attente d'une meilleure offre de taux d'intérêt."
+},
+{
+  "id":"13",
+
+    "nom": "Marie Leroy",
+    "email": "marie.leroy@example.com",
+    "numeroDeTelephone": "+33123456783",
+    "typeDeBienConsulte": "Duplex 95 m², Paris 11ème",
+    "dateDeConsultation": "2024-07-19",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Inscription newsletter",
+    "notes": "Souhaite plus d'informations sur le marché local."
+},
+{
+  "id":"14",
+
+    "nom": "Nicolas Fontaine",
+    "email": "nicolas.fontaine@example.com",
+    "numeroDeTelephone": "+33678901237",
+    "typeDeBienConsulte": "Maison 7 pièces, 180 m², Toulouse Lardenne",
+    "dateDeConsultation": "2024-07-14",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 550000,
+    "statutDuContact": "RDV programmé",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Visite programmée pour début août."
+},
+{
+  "id":"15",
+
+    "nom": "Olivier Durand",
+    "email": "olivier.durand@example.com",
+    "numeroDeTelephone": "+33789012348",
+    "typeDeBienConsulte": "Appartement 3 pièces, 60 m², Marseille Prado",
+    "dateDeConsultation": "2024-07-09",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Recontacté pour plus de détails sur le quartier."
+},
+{
+  "id":"16",
+
+    "nom": "Pauline Mathieu",
+    "email": "pauline.mathieu@example.com",
+    "numeroDeTelephone": "+33890123459",
+    "typeDeBienConsulte": "Loft 85 m², Bordeaux Chartrons",
+    "dateDeConsultation": "2024-07-03",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 320000,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Prévoit de déménager en septembre."
+},
+{
+  "id":"17",
+
+    "nom": "Quentin Moulin",
+    "email": "quentin.moulin@example.com",
+    "numeroDeTelephone": "+33123456784",
+    "typeDeBienConsulte": "Appartement 2 pièces, 55 m², Strasbourg Krutenau",
+    "dateDeConsultation": "2024-07-16",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "RDV programmé",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Visite programmée pour le 28 juillet."
+},
+{
+  "id":"18",
+
+    "nom": "Romain Olivier",
+    "email": "romain.olivier@example.com",
+    "numeroDeTelephone": "+33678901238",
+    "typeDeBienConsulte": "Maison 6 pièces, 160 m², Lille Wazemmes",
+    "dateDeConsultation": "2024-07-11",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 480000,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Comparaison avec d'autres biens similaires."
+},
+{
+  "id":"19",
+
+    "nom": "Sophie Pons",
+    "email": "sophie.pons@example.com",
+    "numeroDeTelephone": "+33789012349",
+    "typeDeBienConsulte": "Studio 25 m², Paris 18ème",
+    "dateDeConsultation": "2024-07-08",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Souhaite voir d'autres options dans le même quartier."
+},
+{
+  "id":"20",
+
+    "nom": "Thomas Roux",
+    "email": "thomas.roux@example.com",
+    "numeroDeTelephone": "+33890123460",
+    "typeDeBienConsulte": "Appartement 4 pièces, 100 m², Nice Cimiez",
+    "dateDeConsultation": "2024-07-07",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 400000,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "Attente de retour de la banque pour le financement."
+},
+{
+  "id":"21",
+
+    "nom": "Ursule Vidal",
+    "email": "ursule.vidal@example.com",
+    "numeroDeTelephone": "+33123456785",
+    "typeDeBienConsulte": "Duplex 70 m², Lyon Confluence",
+    "dateDeConsultation": "2024-07-04",
+    "simulationDeCredit": "Non",
+    "montantDuCreditSimule": 0,
+    "statutDuContact": "Contacté",
+    "sourceDuLead": "Consultation d'annonce",
+    "notes": "Intéressée mais souhaite discuter des frais de notaire."
+},
+{
+  "id":"22",
+
+    "nom": "Vincent Marchand",
+    "email": "vincent.marchand@example.com",
+    "numeroDeTelephone": "+33678901239",
+    "typeDeBienConsulte": "Appartement 3 pièces, 65 m², Rennes Centre",
+    "dateDeConsultation": "2024-07-21",
+    "simulationDeCredit": "Oui",
+    "montantDuCreditSimule": 260000,
+    "statutDuContact": "En attente",
+    "sourceDuLead": "Simulation de crédit",
+    "notes": "En attente de retour pour finaliser l'offre de crédit."
+}
+]
 }
   
   
