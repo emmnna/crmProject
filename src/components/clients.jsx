@@ -16,16 +16,16 @@ export default function Clients(){
        
             <div className="flex-1 flex flex-col p-4">
                 
-                  <h1 className="text-3xl font-bold mb-8 text-blue-900 text-left underline" >List of clients:</h1>
+                  <h1 className="text-3xl font-bold mb-8 text-blue-900 text-left underline" >List des clients:</h1>
                   <input type="text"  placeholder="Search by name" className="mb-4 p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                   <table className="w-full bg-white shadow-md rounded">
                     <thead>
                         <tr>
-                            <th className="border border-gray-300 px-4 py-2">Name</th>
+                            <th className="border border-gray-300 px-4 py-2">Nom</th>
                             <th className="border border-gray-300 px-4 py-2">Email</th>
-                            <th className="border border-gray-300 px-4 py-2">Phone Number</th>
-                            <th className="border border-gray-300 px-4 py-2">Date</th>
-                            <th className="border border-gray-300 px-4 py-2">Simulation</th>
+                            <th className="border border-gray-300 px-4 py-2">Numero de telephone</th>
+                            <th className="border border-gray-300 px-4 py-2">Date de consultation</th>
+                            <th className="border border-gray-300 px-4 py-2">Simulation de credit</th>
                             <th className="border border-gray-300 px-4 py-2">Status</th>
                             <th className="border border-gray-300 px-4 py-2">Action</th>
                         </tr>

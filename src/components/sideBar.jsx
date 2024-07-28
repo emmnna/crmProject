@@ -33,7 +33,7 @@ const Sidebar = () => {
           <ListItemIcon>
             <Home sx={{ color: '#ffffff' }} /> 
           </ListItemIcon>
-          <ListItemText primary="Home" />
+          <ListItemText primary="Acceuil" />
         </ListItem>
         <ListItem
           button
@@ -48,7 +48,7 @@ const Sidebar = () => {
           <ListItemIcon>
             <CreditCard sx={{ color: '#ffffff' }} /> 
           </ListItemIcon>
-          <ListItemText primary="Credits Simulations" />
+          <ListItemText primary="Simulation des credits" />
         </ListItem>
          
       <ListItem
@@ -64,7 +64,7 @@ const Sidebar = () => {
           <ListItemIcon>
             <Group sx={{ color: '#ffffff' }} /> 
           </ListItemIcon>
-          <ListItemText primary="Customers" />
+          <ListItemText primary="Les clients" />
         </ListItem>
         <Divider sx={{ backgroundColor: '#ffffff' }} />
         <ListItem
@@ -80,7 +80,7 @@ const Sidebar = () => {
           <ListItemIcon>
             <AccountBox sx={{ color: '#ffffff' }} />
           </ListItemIcon>
-          <ListItemText primary="My account" />
+          <ListItemText primary="Mon compte" />
         </ListItem>
       </List>
       
