@@ -7,6 +7,9 @@ import User from "./components/user";
 import ClientDetails from "./components/clientDetail";
 import Credits from "./components/credits";
 import CreditDetail from "./components/creditDetail";
+import 'primereact/resources/themes/saga-blue/theme.css';  
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
 function App() {
   return (

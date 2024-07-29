@@ -1,51 +1,45 @@
-
-import { useState ,useEffect} from "react";
-import clients from '../client.json'
-import Client from '../components/client';
+import { useState, useEffect } from "react";
+import clients from '../client.json';
 import Sidebar from "./sideBar";
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
 
-export default function Clients(){
-    
-  
-  
-    return (
-        <>
-        <div className="flex min-h-screen bg-gray-100">
-            
-            <Sidebar />
-       
-            <div className="flex-1 flex flex-col p-4">
-                
-                  <h1 className="text-3xl font-bold mb-8 text-blue-900 text-left underline" >Liste des clients:</h1>
-                  
-                  <table className="w-full bg-white shadow-md rounded">
-                    <thead>
-                        <tr>
-                            <th className="border border-gray-300 px-4 py-2">Nom</th>
-                            <th className="border border-gray-300 px-4 py-2">Email</th>
-                            <th className="border border-gray-300 px-4 py-2">Numero de telephone</th>
-                            <th className="border border-gray-300 px-4 py-2">Date de consultation</th>
-                            <th className="border border-gray-300 px-4 py-2">Simulation de credit</th>
-                            <th className="border border-gray-300 px-4 py-2">Status</th>
-                            <th className="border border-gray-300 px-4 py-2">Action</th>
-                        </tr>
-                    </thead>
-       
-        <tbody>
-       {
-           clients?.clients?.map((c,i)=>{
-            return <Client  cl={c} key={i}/>
-           }) 
-        }
+import { Card } from 'primereact/card';
         
-        </tbody>
-    
-    </table>
-      
-       </div>
-       </div>
 
-   
-        </>
-    )
+
+export default function Credits() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setData(clients?.clients || []);
+    }, []);
+
+    return (
+        <div className="flex min-h-screen bg-white text-black">
+        <Sidebar />
+        <div className="flex-1 flex flex-col p-4">
+        
+                <Card title="Liste des clients">
+            <DataTable value={data} showGridlines stripedRows  tableStyle={{ minWidth: '60rem' }}>
+                        <Column field="nom" header="Nom complet"  sortable style={{ width: '25%' }} />
+                        <Column field="email" header="Email"  sortable style={{ width: '25%' }}/>
+                        <Column field="numeroDeTelephone" header="Numéro de téléphone" />
+                        <Column field="dateDeConsultation" header="Date de consultation" sortable style={{ width: '25%' }} />
+                        <Column field="simulationDeCredit" header="simulation de credit"  style={{ width: '25%' }}/>
+                        <Column field="statutDuContact" header="Statut" />
+                       
+                        <Column
+                            header="Détails"
+                            body={(rowData) => (
+                                <a href={`/client/${rowData.id}`} className="text-blue-500 hover:underline text-s">
+                                    Détails
+                                </a>
+                            )}
+                        />
+                    </DataTable>
+                </Card>
+            </div>
+        </div>
+    );
 }
