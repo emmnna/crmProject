@@ -24,7 +24,7 @@ export default function CreditDetail() {
           <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Autres details : </h1>
           <div className="bg-white shadow-md rounded p-7">
             <div className="mb-4">
-            <h2 className="text-xl font-semibold text-sky-600">Email :</h2>
+            <h2 className="text-xl font-semibold text-sky-600">Email du client:</h2>
               <p className="text-black">{sim.email}</p>
             </div>
             <div className="mb-4">

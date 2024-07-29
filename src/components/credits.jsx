@@ -27,8 +27,8 @@ export default function Credits(){
                             <th className="border border-gray-300 px-4 py-2">Revenu</th>
                             <th className="border border-gray-300 px-4 py-2">Type de bien</th>
                             <th className="border border-gray-300 px-4 py-2">Valeur du projet</th>
-                            <th className="border border-gray-300 px-4 py-2">credit solicite</th>
-                            <th className="border border-gray-300 px-4 py-2">durée de remboursement</th>
+                            <th className="border border-gray-300 px-4 py-2">Credit solicite</th>
+                            <th className="border border-gray-300 px-4 py-2">Durée de remboursement</th>
 
                         </tr>
                     </thead>

@@ -13,7 +13,9 @@ export default function Credit(props) {
             <td className="border border-gray-300 px-2 py-1 text-sm">{props.sim.creditSollicite}</td>
             <td className="border border-gray-300 px-2 py-1 text-sm">{props.sim.dureeDeRemboursementSouhaitee}</td>
             <td className="border border-gray-300 px-2 py-1 text-sm">
+
                 <Link to={`/credit/${props.sim.id}`} className="text-blue-500 hover:underline text-xs">Details</Link>
+                
             </td>
         </tr>
     );
