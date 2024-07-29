@@ -16,8 +16,8 @@ export default function Clients(){
        
             <div className="flex-1 flex flex-col p-4">
                 
-                  <h1 className="text-3xl font-bold mb-8 text-blue-900 text-left underline" >List des clients:</h1>
-                  <input type="text"  placeholder="Search by name" className="mb-4 p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                  <h1 className="text-3xl font-bold mb-8 text-blue-900 text-left underline" >Liste des clients:</h1>
+                  
                   <table className="w-full bg-white shadow-md rounded">
                     <thead>
                         <tr>
