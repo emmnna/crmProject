@@ -15,7 +15,7 @@ function App() {
     
     <Router>
       <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path="/client" element={<Clients />} />
         <Route path="/Sidebar" element={<Sidebar />} />
         <Route path="/user" element={<User />} />
