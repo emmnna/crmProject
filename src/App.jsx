@@ -11,6 +11,7 @@ import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Login from "./components/login";
+import Register from "./components/register";
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
         <Route path="/credit" element={<Credits />} />
         <Route path="/client/:id" element={<ClientDetails />} />
         <Route path="/credit/:id" element={<CreditDetail />} />
-        <Route path="/Login" element={<Login/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+
 
         
 
