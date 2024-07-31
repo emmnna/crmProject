@@ -23,7 +23,7 @@ const Sidebar = () => {
         <ListItem
           button
           component={Link}
-          to="/home"
+          to="/"
           sx={{
             '&:hover': {
               backgroundColor: '#3a3f47', 
