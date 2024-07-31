@@ -13,8 +13,8 @@ export default function Home() {
         <div className="flex min-h-screen bg-white text-blue-800">
         <Sidebar />
 
-            
-            <h1 className="text-3xl font-bold mb-6 text-center underline ">Les dernières simulations :</h1>
+            <div>
+            <h1 className="text-3xl font-bold mb-6 text-center underline ">Les dérnieres simulations :</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {recentSimulations.map((sim, index) => (
                     <Card key={index} title={`${sim.nom} ${sim.prenom}`} subTitle={`Téléphone: ${sim.mobile}`} className="p-shadow-4">
@@ -26,6 +26,7 @@ export default function Home() {
                         <Link to={`/credit/${sim.id}`} className="text-blue-500 hover:underline">Détails</Link>
                     </Card>
                 ))}
+            </div>
             </div>
         </div>
     );
