@@ -23,6 +23,7 @@ export default function Home() {
         labels: Object.keys(projectTypes),
         values: Object.values(projectTypes),
     };
+
     const projectNumbers = {};
     clients?.clients.forEach((cl) => {
         if (cl.simulationDeCredit) {
@@ -34,13 +35,14 @@ export default function Home() {
         labels: Object.keys(projectNumbers),
         values: Object.values(projectNumbers),
     };
+
     const totalCreditAmount = clients?.clients.reduce((acc, cl) => acc + cl.montantDuCreditSimule, 0);
 
     return (
         <div className="flex min-h-screen bg-gray-100 text-gray-900">
             <Sidebar />
-            <div className="flex-1 p-6 flex">
-                <div className="flex-1 lg:w-2/3 pr-6 border-r border-gray-300">
+            <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
+                <div className="flex-1 lg:w-2/3 lg:pr-6 border-r border-gray-300">
                     <div className="space-y-12">
                         <div className="mb-12">
                             <h1 className="text-3xl font-bold mb-6 text-center underline">Les dernières simulations:</h1>
@@ -78,7 +80,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="w-full lg:w-1/3 pl-6">
+                <div className="w-full lg:w-1/3 lg:pl-6">
                     <div className="mb-12">
                         <h1 className="text-3xl font-bold mb-6 text-center underline">Estimation des crédits :</h1>
                         <EstimationCard
