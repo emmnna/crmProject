@@ -20,8 +20,8 @@ export default function CreditDetail() {
     <>
     <div className="flex min-h-screen bg-gray-100 w-full">
         <Sidebar />
-        <div className="flex-1 p-16">
-          <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Autres details : </h1>
+        <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
+          {/* <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Autres details : </h1> */}
           <div className="bg-white shadow-md rounded p-7">
           <div className="mb-4">
           <h2 className="text-xl font-semibold text-sky-600">Nom et Prenom :</h2>

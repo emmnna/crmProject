@@ -19,8 +19,8 @@ export default function ClientDetails() {
     <>
       <div className="flex min-h-screen bg-gray-100">
         <Sidebar />
-        <div className="flex-1 p-8">
-          <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Les détails du client :</h1>
+        <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
+          {/* <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Les détails du client :</h1> */}
           <div className="bg-white shadow-md rounded p-6">
             <div className="mb-4">
               <h2 className="text-sky-600 font-semibold text-xl">Nom complet:</h2>

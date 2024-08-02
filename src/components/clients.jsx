@@ -18,7 +18,7 @@ export default function Credits() {
     return (
         <div className="flex min-h-screen bg-white text-black">
         <Sidebar />
-        <div className="flex-1 flex flex-col p-4">
+        <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
         
                 <Card title="Liste des clients">
             <DataTable value={data} showGridlines stripedRows  tableStyle={{ minWidth: '60rem' }}>

@@ -80,7 +80,7 @@ const Sidebar = () => {
           <ListItemIcon>
             <AccountBox sx={{ color: '#ffffff' }} />
           </ListItemIcon>
-          <ListItemText primary="Mon compte" />
+          <ListItemText primary="Profiles" />
         </ListItem>
       </List>
       

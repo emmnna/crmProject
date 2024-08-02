@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Register() {
+    const [ setPicture] = useState(null);
+
+    const handleImageChange = (e) => {
+        setPicture(e.target.files[0]);
+    };
+
+   
     return (
         <div 
             className="h-screen w-screen flex justify-center items-center bg-cover bg-center" 
@@ -31,6 +39,11 @@ export default function Register() {
                         <label htmlFor="confirm-password" className="block text-gray-700 font-bold">Confirmer le mot de passe :</label>
                         <input type="password" id="confirm-password" className="w-full text-gray-900 p-2 border border-gray-300 rounded mt-1" required />
                     </div>
+                    <div className="mb-4">
+                        <label htmlFor="picture" className="block text-gray-700 font-bold">Image de profil :</label>
+                        <input type="file" id="profileImage" name="profileImage" className="w-full text-gray-900 p-2 border border-gray-300 rounded mt-1" onChange={handleImageChange} accept="image/*" />
+                    </div>
+                   
                     <button type="submit" className="w-full bg-gray-700 text-white py-2 rounded hover:bg-gray-600 font-bold">Créer un compte</button>
                     <div className="mt-4 text-center">
                         <Link to="/login" className="text-blue-500 hover:underline font-bold">Déjà inscrit? Connectez-vous</Link>
