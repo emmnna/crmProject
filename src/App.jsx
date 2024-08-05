@@ -12,6 +12,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Login from "./components/login";
 import Register from "./components/register";
+import NavBar from "./components/navBar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/" element={<Home />} />
         <Route path="/client" element={<Clients />} />
         <Route path="/Sidebar" element={<Sidebar />} />
+        <Route path="/navbar" element={< NavBar/>} />
         <Route path="/user" element={<User />} />
         <Route path="/credit" element={<Credits />} />
         <Route path="/client/:id" element={<ClientDetails />} />

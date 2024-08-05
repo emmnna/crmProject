@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import simulations from '../simulations.json';
 import { useParams } from "react-router-dom";
 import Sidebar from "./sideBar";
+import NavBar from "./navBar";
 
 
 export default function CreditDetail() {
@@ -18,10 +19,13 @@ export default function CreditDetail() {
 
   return (
     <>
-    <div className="flex min-h-screen bg-gray-100 w-full">
-        <Sidebar />
+    <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex">
+            <Sidebar />
+            <div className="flex flex-col flex-1">
+                <NavBar />
         <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
-          {/* <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Autres details : </h1> */}
+         
           <div className="bg-white shadow-md rounded p-7">
           <div className="mb-4">
           <h2 className="text-xl font-semibold text-sky-600">Nom et Prenom :</h2>
@@ -79,6 +83,8 @@ export default function CreditDetail() {
             
           </div>
         </div>
+      </div>
+      </div>
       </div>
 
       

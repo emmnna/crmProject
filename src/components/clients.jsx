@@ -5,6 +5,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
 import { Card } from 'primereact/card';
+import NavBar from "./navBar";
         
 
 
@@ -16,8 +17,11 @@ export default function Credits() {
     }, []);
 
     return (
-        <div className="flex min-h-screen bg-white text-black">
-        <Sidebar />
+        <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex">
+            <Sidebar />
+            <div className="flex flex-col flex-1">
+                <NavBar />
         <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
         
                 <Card title="Liste des clients">
@@ -40,6 +44,8 @@ export default function Credits() {
                     </DataTable>
                 </Card>
             </div>
+        </div>
+        </div>
         </div>
     );
 }

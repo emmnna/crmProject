@@ -7,6 +7,7 @@ import clients from '../client.json';
 import PieChart from './chart';
 import BarChart from './barChart';
 import EstimationCard from './estimationCard';
+import NavBar from './navBar';
 
 export default function Home() {
     const recentSimulations = simulations?.simulations.slice(-5).reverse();
@@ -39,8 +40,11 @@ export default function Home() {
     const totalCreditAmount = clients?.clients.reduce((acc, cl) => acc + cl.montantDuCreditSimule, 0);
 
     return (
-        <div className="flex min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex">
             <Sidebar />
+            <div className="flex flex-col flex-1">
+                <NavBar />
             <div className="flex-1 flex flex-col lg:flex-row p-0 lg:p-6 lg:ml-64">
                 <div className="flex-1 lg:w-2/3 lg:pr-6 border-r border-gray-300">
                     <div className="space-y-12">
@@ -96,5 +100,8 @@ export default function Home() {
                 </div>
             </div>
         </div>
+        </div>
+        </div>
+
     );
 }

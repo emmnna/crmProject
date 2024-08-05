@@ -3,6 +3,7 @@ import clients from "../client.json";
 import { useParams } from "react-router-dom";
 import Sidebar from "./sideBar";
 import Popup from "./popup";
+import NavBar from "./navBar";
 
 export default function ClientDetails() {
   const [cl, setCl] = useState({});
@@ -17,8 +18,11 @@ export default function ClientDetails() {
 
   return (
     <>
-      <div className="flex min-h-screen bg-gray-100">
-        <Sidebar />
+      <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex">
+            <Sidebar />
+            <div className="flex flex-col flex-1">
+                <NavBar />
         <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64"> 
           {/* <h1 className="text-2xl text-blue-900 text-left font-bold mb-6 underline">Les détails du client :</h1> */}
           <div className="bg-white shadow-md rounded p-6">
@@ -68,6 +72,9 @@ export default function ClientDetails() {
           </div>
         </div>
       </div>
+      </div>
+      </div>
+
 
       <Popup openPopup={openPopup} setOpenPopup={setOpenPopup} client={cl} setClient={setCl} />
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
+import { Drawer, List, ListItem, ListItemIcon, ListItemText, Divider,  Box,  Typography  } from '@mui/material';
 import { Home, CreditCard, People, Group, AccountBox} from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
@@ -7,18 +7,27 @@ const Sidebar = () => {
   return (
     <Drawer
       sx={{
-        width: 240,
+        width: 320,
         flexShrink: 0,
         '& .MuiDrawer-paper': {
           width: 320,
           boxSizing: 'border-box',
-          backgroundColor: '#282c34', 
+          backgroundColor: '#001f3f', 
           color: '#ffffff' 
         }
       }}
       variant="permanent"
       anchor="left"
+      
     >
+       <Box sx={{ padding: '16px', backgroundColor: '#001f3f' }}>
+        <Typography variant="h6" sx={{ color: '#ffffff' }}>
+          Dashboard
+        </Typography>
+        
+      </Box>
+       
+     
       <List>
         <ListItem
           button

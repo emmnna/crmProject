@@ -1,6 +1,7 @@
 import Sidebar from "./sideBar";
 import image from '../images/crm.pnj.webp';
-import image2 from '../images/login1.jpg'
+import image2 from '../images/login1.jpg';
+import NavBar from "./navBar";
 
 export default function User(){
     
@@ -21,8 +22,11 @@ export default function User(){
 ]
   
     return (
-        <div className="flex min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+        <div className="flex">
             <Sidebar />
+            <div className="flex flex-col flex-1">
+                <NavBar />
             <div className="flex-1 flex flex-col items-center justify-center lg:ml-64 p-6 space-y-8">
                 {user.map((user, index) => (
                     <div key={index} className="bg-white p-6 rounded-lg shadow-lg space-y-4 max-w-md w-full">
@@ -53,6 +57,8 @@ export default function User(){
                     </div>
                 ))}
             </div>
+        </div>
+        </div>
         </div>
 );
 
