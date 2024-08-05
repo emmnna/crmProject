@@ -5,7 +5,7 @@ export default function Register() {
     const [ setPicture] = useState(null);
 
     const handleImageChange = (e) => {
-        setPicture(e.target.files[0]);
+        setPicture(e.target.files[0]); 
     };
 
    
