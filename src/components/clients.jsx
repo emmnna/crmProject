@@ -6,16 +6,26 @@ import { Column } from 'primereact/column';
 
 import { Card } from 'primereact/card';
 import NavBar from "./navBar";
+import { useNavigate } from 'react-router-dom';
+import { deleteClient } from "../Api";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+
         
-
-
-export default function Credits() {
+export default function Clients() {
     const [data, setData] = useState([]);
+    
 
     useEffect(() => {
-        setData(clients?.clients || []);
+        setData(clients.clients || []);
     }, []);
-
+    const navigate = useNavigate();
+    const handleDelete = async (id) => {
+        await deleteClient(id);
+        setData(data.filter(client => client.id !== id));
+    };
+    
+    
     return (
         <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
         <div className="flex">
@@ -34,16 +44,41 @@ export default function Credits() {
                         <Column field="statutDuContact" header="Statut" />
                        
                         <Column
-                            header="Détails"
-                            body={(rowData) => (
-                                <a href={`/client/${rowData.id}`} className="text-blue-500 hover:underline text-s">
-                                    Détails
-                                </a>
-                            )}
-                        />
+    header="Actions"
+    body={(rowData) => (
+        <div>
+            <a href={`/client/${rowData.id}`} className="text-blue-500 hover:underline text-s">
+                Détails
+            </a>
+            <EditIcon
+            onClick={() => navigate(`/updateClient/${rowData.id}`)} 
+            className="cursor-pointer text-blue-500 ml-2"
+            />
+            <DeleteIcon
+            onClick={() => handleDelete(rowData.id)}
+            className="cursor-pointer text-red-500 ml-2" 
+            />
+        </div>
+    )}
+/>
+                        
                     </DataTable>
                 </Card>
             </div>
+            <div className="flex justify-center my-4">
+
+                        <button 
+                            className="px-4 py-2 bg-blue-500 text-white rounded"
+                            onClick={() => navigate('/addClient')}
+                        >
+                            Ajouter un client
+                        </button>
+                    </div>
+           
+            <div>
+      
+    
+    </div>
         </div>
         </div>
         </div>

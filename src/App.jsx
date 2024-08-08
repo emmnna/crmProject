@@ -13,8 +13,11 @@ import 'primeicons/primeicons.css';
 import Login from "./components/login";
 import Register from "./components/register";
 import NavBar from "./components/navBar";
+import AddClient from "./components/AddClient";
+import UpdateClient from "./components/updateClient";
 
 function App() {
+  
   return (
     <Router>
       <Routes>
@@ -28,6 +31,10 @@ function App() {
         <Route path="/credit/:id" element={<CreditDetail />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+      
+        <Route path="/addClient" element={<AddClient  />} />
+        <Route path="/updateClient/:id" element={<UpdateClient />} />
+
 
 
 
