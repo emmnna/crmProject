@@ -20,7 +20,7 @@ export default function Credits() {
             <Sidebar />
             <div className="flex flex-col flex-1">
                 <NavBar />
-        <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-64">            
+        <div className="flex-1 flex flex-col lg:flex-row p-6 lg:ml-15">            
                 <Card title="Les simulations des crédits">
             <DataTable value={data} stripedRows tableStyle={{ minWidth: '60rem' }}>
                         <Column field="nom" header="Nom" sortable style={{ width: '25%' }} />

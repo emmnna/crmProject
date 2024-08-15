@@ -196,7 +196,7 @@ export default function AddClient() {
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 ></textarea>
                             </div>
-                            <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded">Ajouter le client</button>
+                            <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded">Ajouter</button>
                         </form>
                     </div>
                 </div>

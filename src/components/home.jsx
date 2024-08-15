@@ -45,7 +45,7 @@ export default function Home() {
             <Sidebar />
             <div className="flex flex-col flex-1">
                 <NavBar />
-            <div className="flex-1 flex flex-col lg:flex-row p-0 lg:p-6 lg:ml-64">
+            <div className="flex-1 flex flex-col lg:flex-row p-0 lg:p-6 lg:ml-15">
                 <div className="flex-1 lg:w-2/3 lg:pr-6 border-r border-gray-300">
                     <div className="space-y-12">
                         <div className="mb-12">
