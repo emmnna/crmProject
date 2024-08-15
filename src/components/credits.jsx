@@ -5,6 +5,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Card } from 'primereact/card';
 import NavBar from "./navBar";
+import Visibility from '@mui/icons-material/Visibility';
 
 
 export default function Credits() {
@@ -25,19 +26,21 @@ export default function Credits() {
             <DataTable value={data} stripedRows tableStyle={{ minWidth: '60rem' }}>
                         <Column field="nom" header="Nom" sortable style={{ width: '25%' }} />
                         <Column field="prenom" header="Prénom" sortable style={{ width: '25%' }} />
-                        <Column field="mobile" header="Numéro de téléphone"  />
+                        <Column field="mobile" header="Numéro de téléphone" style={{ width: '25%' }} />
                         <Column field="paysDeResidence" header="Pays" sortable style={{ width: '25%' }}/>
-                        <Column field="revenu" header="Revenu"  />
-                        <Column field="typeDuBien" header="Type de bien"  />
+                        <Column field="revenu" header="Revenu" style={{ width: '25%' }} />
+                        <Column field="typeDuBien" header="Type de bien" style={{ width: '25%' }} />
                         <Column field="valeurDeVotreProjet" header="Valeur "  sortable style={{ width: '25%' }} />
                         <Column field="creditSollicite" header="Crédit sollicité"  sortable style={{ width: '25%' }}/>
                         <Column field="dureeDeRemboursementSouhaitee" header="Durée de remboursement" sortable style={{ width: '25%' }} />
                         <Column
                             header="Détails"
                             body={(rowData) => (
-                                <a href={`/credit/${rowData.id}`} className="text-blue-500 hover:underline text-s">
-                                    Détails
-                                </a>
+                                
+                                 <Visibility
+                                 onClick={() => navigate(`/credit/${rowData.id}`)} 
+                                 className="cursor-pointer text-blue-500 ml-2"
+                                 />
                             )}
                         />
                     </DataTable>
