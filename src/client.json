@@ -9,6 +9,8 @@
       "dateDeConsultation": "2024-07-15",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 450000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Intéressée par une visite. RDV fixé pour la semaine prochaine."
@@ -22,6 +24,8 @@
       "dateDeConsultation": "2024-07-05",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 220000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "RDV programmé",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Visite prévue pour le 22 juillet."
@@ -35,6 +39,8 @@
       "dateDeConsultation": "2024-07-10",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 300000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Dossier de financement en cours de validation."
@@ -47,6 +53,8 @@
       "typeDeBienConsulte": "Duplex 80 m², Toulouse Centre",
       "dateDeConsultation": "2024-07-12",
       "simulationDeCredit": "Non",
+      "Agence": "biat",
+      "estclientbiat":true,
       "montantDuCreditSimule": 0,
       "statutDuContact": "En attente",
       "sourceDuLead": "Consultation d'annonce",
@@ -61,6 +69,8 @@
       "dateDeConsultation": "2024-07-17",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 280000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "RDV programmé",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Visite prévue pour la fin du mois."
@@ -74,6 +84,8 @@
       "dateDeConsultation": "2024-07-18",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":false,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Visite virtuelle demandée."
@@ -87,6 +99,8 @@
       "dateDeConsultation": "2024-07-20",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 350000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "En attente",
       "sourceDuLead": "Simulation de crédit",
       "notes": "En attente de retour de la banque."
@@ -100,6 +114,8 @@
       "dateDeConsultation": "2024-07-13",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Préférait attendre la rentrée pour se décider."
@@ -113,6 +129,8 @@
       "dateDeConsultation": "2024-07-01",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 150000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "En attente",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Attente de confirmation pour un crédit étudiant."
@@ -126,6 +144,8 @@
       "dateDeConsultation": "2024-07-02",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "RDV programmé",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "RDV pour visite fixé pour le 24 juillet."
@@ -139,6 +159,8 @@
       "dateDeConsultation": "2024-07-06",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 200000,
+      "Agence": "biat",
+      "estclientbiat":false,
       "statutDuContact": "En attente",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Attente d'une meilleure offre de taux d'intérêt."
@@ -152,6 +174,8 @@
       "dateDeConsultation": "2024-07-19",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Inscription newsletter",
       "notes": "Souhaite plus d'informations sur le marché local."
@@ -165,6 +189,8 @@
       "dateDeConsultation": "2024-07-14",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 550000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "RDV programmé",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Visite programmée pour début août."
@@ -178,6 +204,8 @@
       "dateDeConsultation": "2024-07-09",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "En attente",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Recontacté pour plus de détails sur le quartier."
@@ -191,6 +219,8 @@
       "dateDeConsultation": "2024-07-03",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 320000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Prévoit de déménager en septembre."
@@ -204,6 +234,8 @@
       "dateDeConsultation": "2024-07-16",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "RDV programmé",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Visite programmée pour le 28 juillet."
@@ -217,6 +249,8 @@
       "dateDeConsultation": "2024-07-11",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 480000,
+      "Agence": "biat",
+      "estclientbiat":false,
       "statutDuContact": "En attente",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Comparaison avec d'autres biens similaires."
@@ -230,6 +264,8 @@
       "dateDeConsultation": "2024-07-08",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Souhaite voir d'autres options dans le même quartier."
@@ -243,6 +279,8 @@
       "dateDeConsultation": "2024-07-07",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 400000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "En attente",
       "sourceDuLead": "Simulation de crédit",
       "notes": "Attente de retour de la banque pour le financement."
@@ -256,6 +294,8 @@
       "dateDeConsultation": "2024-07-04",
       "simulationDeCredit": "Non",
       "montantDuCreditSimule": 0,
+      "Agence": "biat",
+      "estclientbiat":false,
       "statutDuContact": "Contacté",
       "sourceDuLead": "Consultation d'annonce",
       "notes": "Intéressée mais souhaite discuter des frais de notaire."
@@ -269,6 +309,8 @@
       "dateDeConsultation": "2024-07-21",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": 260000,
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "En attente",
       "sourceDuLead": "Simulation de crédit",
       "notes": "En attente de retour pour finaliser l'offre de crédit."
@@ -281,6 +323,8 @@
       "dateDeConsultation": "2024-08-08",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": "500000",
+      "Agence": "biat",
+      "estclientbiat":true,
       "statutDuContact": "en attente",
       "sourceDuLead": "rr",
       "notes": "hhhhhhhhhhhhhh",
@@ -294,6 +338,8 @@
       "dateDeConsultation": "2024-08-09",
       "simulationDeCredit": "Oui",
       "montantDuCreditSimule": "88",
+      "Agence": "biat",
+      "estclientbiat":false,
       "statutDuContact": "en attente",
       "sourceDuLead": "rr",
       "notes": "fffffff",

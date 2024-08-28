@@ -10,6 +10,7 @@ import { deleteClient } from "../Api";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Visibility from '@mui/icons-material/Visibility';
+import { FaCheck, FaTimes } from 'react-icons/fa';
 
         
 export default function Clients() {
@@ -40,6 +41,8 @@ export default function Clients() {
                         <Column field="email" header="Email"  sortable style={{ width: '25%' }}/>
                         <Column field="numeroDeTelephone" header="Numéro de téléphone" />
                         <Column field="dateDeConsultation" header="Date de consultation" sortable style={{ width: '25%' }} />
+                        <Column field="Agence" header="Agence" sortable style={{ width: '15%' }} />
+                        <Column field="estclientbiat" header="Client Biat" style={{ width: '25%' }} body={(rowData) => rowData.estclientbiat ? <FaCheck style={{ color: 'green' }} /> : <FaTimes style={{ color: 'red' }} />}/>
                         <Column field="simulationDeCredit" header="simulation de credit"  style={{ width: '25%' }}/>
                         <Column field="statutDuContact" header="Statut" />
                        

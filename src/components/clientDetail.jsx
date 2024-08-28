@@ -55,6 +55,14 @@ export default function ClientDetails() {
               <p className="text-black">{cl.montantDuCreditSimule}</p>
             </div>
             <div className="mb-4">
+              <h2 className="text-xl font-semibold text-sky-600">Agence:</h2>
+              <p className="text-black">{cl.Agence}</p>
+            </div>
+            <div className="mb-4">
+              <h2 className="text-xl font-semibold text-sky-600">Client Biat:</h2>
+              <p className="text-black">{cl.estclientbiat ? "Oui" : "Non"}</p>
+            </div>
+            <div className="mb-4">
               <h2 className="text-xl font-semibold text-sky-600">Status du contact:</h2>
               <p className="text-black">{cl.statutDuContact}</p>
             </div>
