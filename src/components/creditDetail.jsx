@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-
-import simulations from '../simulations.json';
 import { useParams } from "react-router-dom";
 import Sidebar from "./sideBar";
 import NavBar from "./navBar";
+import { getSimulById } from "../Api";
 
 
 export default function CreditDetail() {
@@ -12,9 +11,16 @@ export default function CreditDetail() {
 
 
   useEffect(() => {
-    console.log(id);
-    const nS = simulations.simulations.find((s) => s.id === id);
-    setSim(nS);
+    const fetchSimulDetails = async () => {
+      try {
+        const simulData = await getSimulById(id);
+        setSim(simulData); 
+      } catch (error) {
+        console.error("Erreur lors de la récupération des détails du simulation :", error);
+      }
+    };
+
+    fetchSimulDetails();
   }, [id]);
 
   return (

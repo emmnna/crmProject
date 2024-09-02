@@ -1,19 +1,28 @@
 import { useState, useEffect } from 'react';
-import clientData from '../client.json';
 import Sidebar from './sideBar';
 import NavBar from './navBar';
 import { useNavigate, useParams } from 'react-router-dom';
-import { editClient } from "../Api";
+import { editClient, getClients } from "../Api"; 
 
 export default function UpdateClient() {
     const { id } = useParams(); 
     const navigate = useNavigate();
     const [client, setClient] = useState(null);
 
-    
+    const fetchClientDetails = async () => {
+        try {
+            const clients = await getClients();
+            const foundClient = clients.find(client => client.id === parseInt(id)); 
+            setClient(foundClient);
+        } catch (error) {
+            console.error("Erreur lors de la récupération des détails du client :", error);
+        }
+    };
+
     useEffect(() => {
-        const foundClient = clientData.clients.find(client => client.id === parseInt(id)); 
-        setClient(foundClient);
+        if (id) {
+            fetchClientDetails();
+        }
     }, [id]);
 
     const handleChange = (e) => {
@@ -26,15 +35,18 @@ export default function UpdateClient() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await editClient(id, client);
-        console.log("Client updated:", client);
-        navigate('/client'); 
+        try {
+            await editClient(id, client); 
+            console.log("Client updated:", client);
+            navigate('/client'); 
+        } catch (error) {
+            console.error("Erreur lors de la mise à jour du client :", error);
+        }
     }
 
     if (!client) {
         return <div>...</div>; 
     }
-
     return (
         <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
             <div className="flex">
@@ -52,7 +64,7 @@ export default function UpdateClient() {
                                     type="text"
                                     name="nom"
                                     id="nom"
-                                    value={client.nom}
+                                    value={client.nom || ""}
                                     onChange={handleChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     required
@@ -66,61 +78,61 @@ export default function UpdateClient() {
                                     type="email"
                                     name="email"
                                     id="email"
-                                    value={client.email}
+                                    value={client.email || ""}
                                     onChange={handleChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     required
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="numeroDeTelephone">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="numero_de_telephone">
                                     Numéro de téléphone
                                 </label>
                                 <input
                                     type="text"
-                                    name="numeroDeTelephone"
-                                    id="numeroDeTelephone"
-                                    value={client.numeroDeTelephone}
+                                    name="numero_de_telephone"
+                                    id="numero_de_telephone"
+                                    value={client.numero_de_telephone || ""}
                                     onChange={handleChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="dateDeConsultation">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="date_de_consultation">
                                     Date de consultation
                                 </label>
                                 <input
                                     type="date"
-                                    name="dateDeConsultation"
-                                    id="dateDeConsultation"
-                                    value={client.dateDeConsultation}
+                                    name="date_de_consultation"
+                                    id="date_de_consultation"
+                                    value={client.date_de_consultation || ""}
                                     onChange={handleChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     required
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="simulationDeCredit">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="simulation_de_credit">
                                     Simulation de crédit
                                 </label>
                                 <input
                                     type="text"
-                                    name="simulationDeCredit"
-                                    id="simulationDeCredit"
-                                    value={client.simulationDeCredit}
+                                    name="simulation_de_credit"
+                                    id="simulation_de_credit"
+                                    value={client.simulation_de_credit || ""}
                                     onChange={handleChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="statutDuContact">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="statut_du_contact">
                                     Statut du contact
                                 </label>
                                 <input
                                     type="text"
-                                    name="statutDuContact"
-                                    id="statutDuContact"
-                                    value={client.statutDuContact}
+                                    name="statut_du_contact"
+                                    id="statut_du_contact"
+                                    value={client.statut_du_contact || ""}
                                     onChange={handleChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 />

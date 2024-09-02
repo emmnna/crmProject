@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { useState } from "react";
 
 export default function Popup({ openPopup, setOpenPopup, client, setClient }) {
-    const [status, setStatus] = useState(client.statutDuContact);
+    const [status, setStatus] = useState(client. statut_du_contact);
 
     const handleStatusChange = (event) => {
         setStatus(event.target.value);
     };
 
     const handleSubmit = () => {
-        setClient({ ...client, statutDuContact: status });
+        setClient({ ...client,  statut_du_contact: status });
         setOpenPopup(false);
     };
 
@@ -26,7 +26,7 @@ export default function Popup({ openPopup, setOpenPopup, client, setClient }) {
                         value={status}
                         onChange={handleStatusChange}
                     >
-                        <MenuItem value={"contacté"}>contacté</MenuItem>
+                        <MenuItem value={"Contacté"}>Contacté</MenuItem>
                         <MenuItem value={"En attente"}>En attente</MenuItem>
                         <MenuItem value={"RDV programmé"}>RDV programmé</MenuItem>
                     </Select>

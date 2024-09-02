@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import clients from '../client.json';
 import Sidebar from "./sideBar";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
@@ -7,6 +6,7 @@ import { Card } from 'primereact/card';
 import NavBar from "./navBar";
 import { useNavigate } from 'react-router-dom';
 import { deleteClient } from "../Api";
+import { getClients } from "../Api";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Visibility from '@mui/icons-material/Visibility';
@@ -17,10 +17,21 @@ export default function Clients() {
     const [data, setData] = useState([]);
     
 
-    useEffect(() => {
-        setData(clients.clients || []);
-    }, []);
+   
     const navigate = useNavigate();
+     useEffect(() => {
+        const fetchClients = async () => {
+            try {
+                const clients = await getClients(); 
+                setData(clients);
+            } catch (error) {
+                console.error("Erreur lors de la récupération des clients :", error);
+            }
+        };
+
+        fetchClients();
+    }, []);
+
     const handleDelete = async (id) => {
         await deleteClient(id);
         setData(data.filter(client => client.id !== id));
@@ -39,12 +50,12 @@ export default function Clients() {
             <DataTable value={data} showGridlines stripedRows  tableStyle={{ minWidth: '60rem' }}>
                         <Column field="nom" header="Nom complet"  sortable style={{ width: '25%' }} />
                         <Column field="email" header="Email"  sortable style={{ width: '25%' }}/>
-                        <Column field="numeroDeTelephone" header="Numéro de téléphone" />
-                        <Column field="dateDeConsultation" header="Date de consultation" sortable style={{ width: '25%' }} />
-                        <Column field="Agence" header="Agence" sortable style={{ width: '15%' }} />
+                        <Column field="numero_de_telephone" header="Numéro de téléphone" />
+                        <Column field="date_de_consultation" header="Date de consultation" sortable style={{ width: '25%' }} />
+                        <Column field="agence" header="Agence" sortable style={{ width: '15%' }} />
                         <Column field="estclientbiat" header="Client Biat" style={{ width: '25%' }} body={(rowData) => rowData.estclientbiat ? <FaCheck style={{ color: 'green' }} /> : <FaTimes style={{ color: 'red' }} />}/>
-                        <Column field="simulationDeCredit" header="simulation de credit"  style={{ width: '25%' }}/>
-                        <Column field="statutDuContact" header="Statut" />
+                        <Column field="simulation_de_credit" header="simulation de credit"  style={{ width: '25%' }}/>
+                        <Column field="statut_du_contact" header="Statut" />
                        
                         <Column
     header="Actions"
