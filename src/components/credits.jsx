@@ -13,8 +13,6 @@ import { getSimulations } from "../Api";
 export default function Credits() {
     const [data, setData] = useState([]);
     
-
-   
     const navigate = useNavigate();
      useEffect(() => {
         const fetchSimulations = async () => {
@@ -40,12 +38,11 @@ export default function Credits() {
                         <Column field="nom_sim" header="Nom" sortable style={{ width: '25%' }} />
                         <Column field="prenom" header="Prénom" sortable style={{ width: '25%' }} />
                         <Column field="mobile" header="Numéro de téléphone" style={{ width: '25%' }} />
-                        <Column field="paysDeResidence" header="Pays" sortable style={{ width: '25%' }}/>
-                        <Column field="revenu" header="Revenu" style={{ width: '25%' }} />
-                        <Column field="typeDuBien" header="Type de bien" style={{ width: '25%' }} />
-                        <Column field="valeurDeVotreProjet" header="Valeur "  sortable style={{ width: '25%' }} />
-                        <Column field="creditSollicite" header="Crédit sollicité"  sortable style={{ width: '25%' }}/>
-                        <Column field="dureeDeRemboursementSouhaitee" header="Durée de remboursement" sortable style={{ width: '25%' }} />
+                        <Column field="pays_de_residence" header="Pays" sortable style={{ width: '25%' }}/>
+                        <Column field="type_du_bien" header="Type de bien" style={{ width: '25%' }} />
+                        <Column field="valeur_de_votre_projet" header="Valeur "  sortable style={{ width: '25%' }} />
+                        <Column field="credit_sollicite" header="Crédit sollicité"  sortable style={{ width: '25%' }}/>
+                        <Column field="duree_de_Remboursement_souhaitee" header="Durée de remboursement" sortable style={{ width: '25%' }} />
                         <Column
                             header="Détails"
                             body={(rowData) => (

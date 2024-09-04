@@ -67,7 +67,7 @@ export default function ClientDetails() {
                 </div>
                 <div className="mb-4">
                   <h2 className="text-xl font-semibold text-sky-600">Client Biat:</h2>
-                  <p className="text-black">{cl.estclientbiat ? "Oui" : "Non"}</p>
+                  <p className="text-black">{cl.est_client_biat ? "Oui" : "Non"}</p>
                 </div>
                 <div className="mb-4">
                   <h2 className="text-xl font-semibold text-sky-600">Statut du contact:</h2>

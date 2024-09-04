@@ -3,30 +3,17 @@ import Sidebar from './sideBar';
 import NavBar from './navBar';
 import { useNavigate } from 'react-router-dom';
 import { addClient } from "../Api";
+import { Client } from '../client';
 
 export default function AddClient() {
-    const [newClient, setNewClient] = useState({
-        nom: '',
-        email: '',
-        numero_de_telephone: '',
-        type_de_bien_consulte: '',
-        date_de_consultation: '',
-        simulation_de_credit: '',
-        agence: '', 
-        estclientbiat: null, 
-        montant_du_credit_simule: '',
-        statut_du_contact: '',
-        source_du_lead: '',
-        notes: ''
-    });
+    const [newClient, setNewClient] = useState(Client);
 
     const navigate = useNavigate();
-
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setNewClient(prevState => ({
             ...prevState,
-            [name]: type === 'checkbox' ? checked : (type === 'radio' ? value === 'true' : value)
+            [name]: type === 'checkbox' ? checked : value
         }));
     };
 
@@ -35,21 +22,7 @@ export default function AddClient() {
         if (newClient.nom && newClient.email && newClient.numero_de_telephone) {
             addClient(newClient)
                 .then(() => {
-                    setNewClient({
-                        nom: '',
-                        email: '',
-                        numero_de_telephone: '',
-                        type_de_bien_consulte: '',
-                        date_de_consultation: '',
-                        simulation_de_credit: '',
-                        agence: '',
-                        estclientbiat: null,
-                        montant_du_credit_simule: '',
-                        statut_du_contact: '',
-                        source_du_lead: '',
-                        notes: ''
-                    });
-
+                    setNewClient(Client); 
                     navigate('/client');
                 })
                 .catch((error) => {
@@ -59,6 +32,7 @@ export default function AddClient() {
             console.error('Tous les champs obligatoires ne sont pas remplis.');
         }
     };
+
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
@@ -138,32 +112,32 @@ export default function AddClient() {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="estclientbiat">Simulation de credit</label>
-                                <div className="flex items-center">
-                                    <label className="inline-flex items-center mr-4">
-                                        <input
-                                            type="radio"
-                                            name="simulation_de_credit"
-                                            value={true}
-                                            checked={newClient.simulation_de_credit === true}
-                                            onChange={handleChange}
-                                            className="form-radio"
-                                        />
-                                        <span className="ml-2">Oui</span>
-                                    </label>
-                                    <label className="inline-flex items-center">
-                                        <input
-                                            type="radio"
-                                            name="simulation_de_credit"
-                                            value={false}
-                                            checked={newClient.simulation_de_credit === false}
-                                            onChange={handleChange}
-                                            className="form-radio"
-                                        />
-                                        <span className="ml-2">Non</span>
-                                    </label>
-                                </div>
-                            </div>
+    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="simulation_de_credit">Simulation de crédit</label>
+    <div className="flex items-center">
+        <label className="inline-flex items-center mr-4">
+            <input
+                type="radio"
+                name="simulation_de_credit"
+                value="Oui"
+                checked={newClient.simulation_de_credit === "Oui"}
+                onChange={handleChange}
+                className="form-radio"
+            />
+            <span className="ml-2">Oui</span>
+        </label>
+        <label className="inline-flex items-center">
+            <input
+                type="radio"
+                name="simulation_de_credit"
+                value="Non"
+                checked={newClient.simulation_de_credit === "Non"}
+                onChange={handleChange}
+                className="form-radio"
+            />
+            <span className="ml-2">Non</span>
+        </label>
+    </div>
+</div>
 
                             <div className="mb-4">
                                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="agence">Agence</label>
@@ -179,14 +153,14 @@ export default function AddClient() {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="estclientbiat">Client Biat</label>
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="est_client_biat">Client Biat</label>
                                 <div className="flex items-center">
                                     <label className="inline-flex items-center mr-4">
                                         <input
                                             type="radio"
-                                            name="estclientbiat"
+                                            name="est_client_biat"
                                             value={true}
-                                            checked={newClient.estclientbiat === true}
+                                            checked={newClient.est_client_biat === true}
                                             onChange={handleChange}
                                             className="form-radio"
                                         />
@@ -195,9 +169,9 @@ export default function AddClient() {
                                     <label className="inline-flex items-center">
                                         <input
                                             type="radio"
-                                            name="estclientbiat"
+                                            name="est_client_biat"
                                             value={false}
-                                            checked={newClient.estclientbiat === false}
+                                            checked={newClient.est_client_biat === false}
                                             onChange={handleChange}
                                             className="form-radio"
                                         />

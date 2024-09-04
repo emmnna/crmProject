@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "http://127.0.0.1:8000/";
+const baseURL = "http://127.0.0.1:8000/api/";
 
 export const getClients = async () => {
     try {
@@ -42,6 +42,7 @@ export const getSimulById = async (id) => {
 
 export const addClient = async (client) => {
     try {
+        console.log("Données envoyées:", client); 
         const response = await axios.post(`${baseURL}clients/`, client);
         return response.data;
     } catch (error) {

@@ -53,7 +53,8 @@ export default function Clients() {
                         <Column field="numero_de_telephone" header="Numéro de téléphone" />
                         <Column field="date_de_consultation" header="Date de consultation" sortable style={{ width: '25%' }} />
                         <Column field="agence" header="Agence" sortable style={{ width: '15%' }} />
-                        <Column field="estclientbiat" header="Client Biat" style={{ width: '25%' }} body={(rowData) => rowData.estclientbiat ? <FaCheck style={{ color: 'green' }} /> : <FaTimes style={{ color: 'red' }} />}/>
+                        <Column field="est_client_biat" header="Client Biat" style={{ width: '25%' }} 
+                        body={(rowData) => rowData.est_client_biat ? <FaCheck style={{ color: 'green' }} /> : <FaTimes style={{ color: 'red' }} />} />
                         <Column field="simulation_de_credit" header="simulation de credit"  style={{ width: '25%' }}/>
                         <Column field="statut_du_contact" header="Statut" />
                        

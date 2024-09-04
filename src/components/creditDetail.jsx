@@ -44,7 +44,7 @@ export default function CreditDetail() {
             </div>
             <div className="mb-4">
           <h2 className="text-xl font-semibold text-sky-600">Pays de residence :</h2>
-              <p className="text-black">{sim.paysDeResidence}</p>
+              <p className="text-black">{sim.pays_de_residence}</p>
             </div>
             <div className="mb-4">
             <h2 className="text-xl font-semibold text-sky-600">Revenu :</h2>
@@ -53,19 +53,19 @@ export default function CreditDetail() {
             
             <div className="mb-4">
             <h2 className="text-xl font-semibold text-sky-600">Type de bien :</h2>
-              <p className="text-black">{sim.typeDuBien}</p>
+              <p className="text-black">{sim.type_du_bien}</p>
             </div>
             <div className="mb-4">
             <h2 className="text-xl font-semibold text-sky-600">Valeur de projet :</h2>
-              <p className="text-black">{sim.valeurDeVotreProjet}</p>
+              <p className="text-black">{sim.valeur_de_votre_projet}</p>
             </div>
             <div className="mb-4">
             <h2 className="text-xl font-semibold text-sky-600">Credit sollicite :</h2>
-              <p className="text-black">{sim.creditSollicite}</p>
+              <p className="text-black">{sim.credit_sollicite}</p>
             </div>
             <div className="mb-4">
             <h2 className="text-xl font-semibold text-sky-600">Durée de remboursement souhaitée :</h2>
-              <p className="text-black">{sim.dureeDeRemboursementSouhaitee}</p>
+              <p className="text-black">{sim.duree_de_Remboursement_souhaitee}</p>
             </div>
             
             <div className="mb-4">
@@ -74,16 +74,16 @@ export default function CreditDetail() {
             </div>
             <div className="mb-4">
   <h2 className="text-xl font-semibold text-sky-600">Client du Biat :</h2>
-  <p className="text-black">{sim.clientBiat ? "Oui" : "Non"}</p>
+  <p className="text-black">{sim.client_biat ? "Oui" : "Non"}</p>
 </div>
 
             <div className="mb-4">
               <h2 className="text-xl font-semibold text-sky-600">Montant maximum de credit :</h2>
-              <p className="text-black">{sim.montantMaximumDeCredit}</p>
+              <p className="text-black">{sim.montant_maximum_de_credit}</p>
             </div>
             <div className="mb-4">
               <h2 className="text-xl font-semibold text-sky-600">L'auto financement :</h2>
-              <p className="text-black">{sim.votreAutofinancement}</p>
+              <p className="text-black">{sim.votre_auto_financement}</p>
             </div>
           
             

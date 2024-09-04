@@ -112,18 +112,37 @@ export default function UpdateClient() {
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="simulation_de_credit">
-                                    Simulation de crédit
-                                </label>
-                                <input
-                                    type="text"
-                                    name="simulation_de_credit"
-                                    id="simulation_de_credit"
-                                    value={client.simulation_de_credit || ""}
-                                    onChange={handleChange}
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                />
-                            </div>
+    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="simulation_de_credit">
+        Simulation de crédit
+    </label>
+    <div>
+        <label className="inline-flex items-center">
+            <input
+                type="radio"
+                name="simulation_de_credit"
+                value="Oui"
+                checked={client.simulation_de_credit === "Oui"}
+                onChange={handleChange}
+                className="form-radio text-blue-500"
+            />
+            <span className="ml-2">Oui</span>
+        </label>
+        <label className="inline-flex items-center ml-6">
+            <input
+                type="radio"
+                name="simulation_de_credit"
+                value="Non"
+                checked={client.simulation_de_credit === "Non"}
+                onChange={handleChange}
+                className="form-radio text-blue-500"
+            />
+            <span className="ml-2">Non</span>
+        </label>
+    </div>
+</div>
+
+
+
                             <div className="mb-4">
                                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="statut_du_contact">
                                     Statut du contact
